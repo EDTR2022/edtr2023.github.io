@@ -63,7 +63,7 @@ var CentroControl;
 var factor;
 var LineaBase;
 var AnimacionBsSalida=0;
-var seccion;//=Math.floor(Lienzo.height/12);
+var seccion;
 var Tclick=false;
 var contador=0;
 
