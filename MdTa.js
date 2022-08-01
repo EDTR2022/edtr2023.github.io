@@ -86,7 +86,7 @@ var AmplitudMax;
 var PeriodoMax;
 
 var RatonAbajo=false;
-var CxyRaton;//Coordenadas del raton;
+var CxyRaton;
 var CxyDesplazamiento={x:0,y:0}, CxyVelocidad={x:0,y:0},CxyAceleracion={x:0,y:0}, CxyMenu={x:0,y:0};
 var CxyMenu2={x:20,y:20};
 var CxyLogo={x:0,y:0};
@@ -127,7 +127,6 @@ function onRoundRect(ctx,x,y,width,height,radius,txt,color1,color2){
  }
 
 function onRedimensionar(){
-    //division.height=Math.floor(window.innerHeight);
     Lienzo.width=Math.floor(0.95*window.innerWidth);
     Lienzo.height=Math.floor(0.95*window.innerHeight);
     let diagonalActual=Math.floor(Math.sqrt(Math.pow(Lienzo.width,2)+Math.pow(Lienzo.height,2)));
@@ -135,8 +134,7 @@ function onRedimensionar(){
     if(factor>=0.75){
         factor=1;
     }
-    //console.log(factor);
-    
+        
     AmplitudMax=Math.round(200*factor);
     PeriodoMax=Math.round(200*factor);
     parametro[0]=Math.round(factor*iAmplitud);
