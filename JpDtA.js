@@ -225,7 +225,7 @@ function Dibujo(){
 function onInicio(){
     for(let i=0;i<45;i++){
         Animacion[i] = new Image();
-        Animacion[i].src = "gif/"+(i+1)+".png";
+        Animacion[i].src = "(i+1)+".png";
         Animacion[i].onload = function(){
         }
     }
