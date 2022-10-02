@@ -133,7 +133,7 @@ function fPantallaNo1(){
     pincel.clearRect(0,0,Lienzo.width,Lienzo.height);
         
     pincel.drawImage(Encabezado,EncabezadoX-pos,40*factor,AnchoEncabezado,AltoEncabezado);
-    //pincel.drawImage(Animacion[index],AnimacionX+pos,AnimacionY,anchoAnimacion,altoAnimacion);
+    pincel.drawImage(Animacion[index],AnimacionX+pos,AnimacionY,anchoAnimacion,altoAnimacion);
         
     //AnchoBoton=Lienzo.width/8.25;
     //AltoBoton=AnchoBoton/4;
