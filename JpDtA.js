@@ -1,6 +1,6 @@
 const conversion = 1;//Math.PI/180;
 const circunferencia= 2*Math.PI;
-const fps=60;
+const fps=30;
 var fuente;//="bold 20px Serif";
 var factor,factorH,factorV,TamanoFuente;
 const TamanoFuenteIni=85;
