@@ -17,41 +17,41 @@ for(let i=0;i<12;i++){
 }
 
 const logo1 = new Image();
-logo1.src = "https://latex.codecogs.com/svg.image?%5CLARGE%20%5Cboldsymbol%7B%7B%5Ccolor%7BYellow%7D%20E_%7B%7B%5Ccolor%7BRed%7D%20d%7D%7DT%5E%7B%7B%5Ccolor%7BRed%7D%20r%7D%7D";
+logo1.src = "logo1.svg";
 logo1.onload = function(){
 }
 const logo2 = new Image();
-logo2.src = "https://latex.codecogs.com/svg.image?%5CLARGE%20%5Cboldsymbol%7B%7B%5Ccolor%7BWhite%7D%20E_%7B%7B%5Ccolor%7BRed%7D%20d%7D%7DT%5E%7B%7B%5Ccolor%7BRed%7D%20r%7D%7D";
+logo2.src = "logo2.svg";
 logo2.onload = function(){
 }
 
 const desplazamientoTrue = new Image();
-desplazamientoTrue.src = "https://img.icons8.com/ios-glyphs/90/40C057/audio-wave--v1.png";
+desplazamientoTrue.src = "desplazamientoTrue.png";
 desplazamientoTrue.onload = function(){
 }
 
 const desplazamientoFalse = new Image();
-desplazamientoFalse.src = "https://img.icons8.com/ios-glyphs/90/EBEBEB/audio-wave--v1.png";
+desplazamientoFalse.src = "desplazamientoFalse.png";
 desplazamientoFalse.onload = function(){
 }
 
 const velocidadTrue = new Image();
-velocidadTrue.src = "https://img.icons8.com/ios/100/22C3E6/radio-waves.png";
+velocidadTrue.src = "velocidadTrue.png";
 velocidadTrue.onload = function(){
 }
 
 const velocidadFalse = new Image();
-velocidadFalse.src = "https://img.icons8.com/ios/100/EBEBEB/radio-waves.png";
+velocidadFalse.src = "velocidadFalse.png";
 velocidadFalse.onload = function(){
 }
 
 const aceleracionTrue = new Image();
-aceleracionTrue.src = "https://img.icons8.com/wired/64/FA5252/audio-wave-1.png";
+aceleracionTrue.src = "aceleracionTrue.png";
 aceleracionTrue.onload = function(){
 }
 
 const aceleracionFalse = new Image();
-aceleracionFalse.src = "https://img.icons8.com/wired/64/EBEBEB/audio-wave-1.png";
+aceleracionFalse.src = "aceleracionFalse.png";
 aceleracionFalse.onload = function(){
 }
 
@@ -63,7 +63,7 @@ var CentroControl;
 var factor;
 var LineaBase;
 var AnimacionBsSalida=0;
-var seccion;
+var seccion;//=Math.floor(Lienzo.height/12);
 var Tclick=false;
 var contador=0;
 
@@ -86,7 +86,7 @@ var AmplitudMax;
 var PeriodoMax;
 
 var RatonAbajo=false;
-var CxyRaton;
+var CxyRaton;//Coordenadas del raton;
 var CxyDesplazamiento={x:0,y:0}, CxyVelocidad={x:0,y:0},CxyAceleracion={x:0,y:0}, CxyMenu={x:0,y:0};
 var CxyMenu2={x:20,y:20};
 var CxyLogo={x:0,y:0};
@@ -127,6 +127,7 @@ function onRoundRect(ctx,x,y,width,height,radius,txt,color1,color2){
  }
 
 function onRedimensionar(){
+    //division.height=Math.floor(window.innerHeight);
     Lienzo.width=Math.floor(0.95*window.innerWidth);
     Lienzo.height=Math.floor(0.95*window.innerHeight);
     let diagonalActual=Math.floor(Math.sqrt(Math.pow(Lienzo.width,2)+Math.pow(Lienzo.height,2)));
@@ -134,7 +135,8 @@ function onRedimensionar(){
     if(factor>=0.75){
         factor=1;
     }
-        
+    //console.log(factor);
+    
     AmplitudMax=Math.round(200*factor);
     PeriodoMax=Math.round(200*factor);
     parametro[0]=Math.round(factor*iAmplitud);
