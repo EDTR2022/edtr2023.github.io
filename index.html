@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <base target="_top">
-    <title>Dios ten misericordia</title>
-  </head>
-  
-  <body onload="onInicio()">
-    <canvas id="idLienzo">
-      
-    </canvas>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación</title>
+</head>
+
+<body onload="onInicio()">
+    <iframe
+        id="idPheT1" 
+        style="display: none;" 
+        frameborder="0" 
+        src="index.html"
+        type="text/html" >
+    </iframe>
+    <iframe
+        id="idPheT2" 
+        style="display: none;" 
+        frameborder="0" 
+        src="Vectores.html"
+        type="text/html" >
+    </iframe>
+    <iframe
+        id="idPheT3" 
+        style="display: none;" 
+        frameborder="0" 
+        src="Gravedad.html"
+        type="text/html" >
+    </iframe>
     
-    <script src="MdTa.js" ></script>
-  </body>
+    <canvas 
+        id="idLienzo"
+        style="position:absolute ; top: 0px;left: 0px;width: 100%;height: 100%;" 
+    > 
+    </canvas>
+    <canvas 
+        id="idMenuP"
+        style="display:none; position:absolute ; top: 0px;left: 0px;width: 100%;height: 100%;" 
+    > 
+    </canvas>
+    <script src="JpDtA.js" ></script>
+ </body>
 </html>
