@@ -82,7 +82,9 @@ function onRedimensionar(){
         
         anchoAnimacion=Math.floor(Lienzo.width/3);
         altoAnimacion=Math.floor(Lienzo.height/3)//anchoAnimacion/1.72);
-        AnimacionY =Math.floor(Lienzo.height/2-altoAnimacion/2);//Math.floor(AltoEncabezado+30);//Lienzo.height/3)//factor*350;
+        AnimacionY =//Math.floor(Lienzo.height/2-altoAnimacion/2);
+                    Math.floor(AltoEncabezado+50);
+                    //Lienzo.height/3)//factor*350;
         AnimacionX= Lienzo.width/2-anchoAnimacion/2;
         
         
