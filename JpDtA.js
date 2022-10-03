@@ -7,7 +7,7 @@ const TamanoFuenteIni=85;
 const diagonalIni = 2255;
 const raj=-15;
 var vPantallaNo1=true,vPantallaNo2=false,vPantallaNo3=false;
-var index=0,pos,posX=25,posY=raj,
+var index=0,repeticion=0,pos,posX=25,posY=raj,
     fuente1,fuente2,anchoAnimacion,altoAnimacion,
     AnchoEncabezado,AltoEncabezado,EncabezadoX,
     AnimacionY,AnimacionX,centro,
@@ -69,7 +69,7 @@ function onRedimensionar(){
     if(factor>=0.8 && factor<=1){
         factor=0.9;
     }
-    
+        
     if(fPantallaNo1){
         centro = Lienzo.width/2;
         //TamanoFuente= factor*TamanoFuenteIni;
@@ -90,7 +90,7 @@ function onRedimensionar(){
         
         AnchoBoton=0.12*Lienzo.width;
         AltoBoton=AnchoBoton/4;//Lienzo.height/24.325;
-        CentroBotonY=AnimacionY+altoAnimacion+120*factor //AltoEncabezado+altoAnimacion+2*AltoBoton+100;
+        CentroBotonY=AnimacionY+altoAnimacion+100*factor //AltoEncabezado+altoAnimacion+2*AltoBoton+100;
 
         EncabezadoX=Lienzo.width/2-AnchoEncabezado/2;
 
@@ -133,7 +133,6 @@ function onArea(Lienzo,evt,Cx,Cy,espacioX,espacioY){
 function fPantallaNo1(){
             
     pincel.clearRect(0,0,Lienzo.width,Lienzo.height);
-        
     pincel.drawImage(Encabezado,EncabezadoX-pos,40*factor,AnchoEncabezado,AltoEncabezado);
     pincel.drawImage(Animacion[index],AnimacionX+pos,AnimacionY,anchoAnimacion,altoAnimacion);
         
@@ -164,6 +163,8 @@ function fPantallaNo1(){
     onRoundRect(pincel,centro/2-AnchoBoton2/2-pos,CentroBotonY-AltoBoton2/2-pos,AnchoBoton2,AltoBoton2,10*factor,"Vectores","blue","blue");
     onRoundRect(pincel,centro-AnchoBoton1/2-pos,CentroBotonY-AltoBoton1/2-pos,AnchoBoton1,AltoBoton1,10*factor,"M.A.S","blue","blue");
     onRoundRect(pincel,3*centro/2-AnchoBoton3/2-pos,CentroBotonY-AltoBoton3/2-pos,AnchoBoton3,AltoBoton3,10*factor,"Fuerza","blue","blue");
+
+    
     //console.log(pos);
     
 }
@@ -174,8 +175,8 @@ function fPantallaNo2(){
     if(contador){
         PheT1.style.display="inline"
         PheT1.style.position="absolute"
-        PheT1.style.top="0%" 
-        PheT1.style.left="0%"
+        PheT1.style.top="0%" //0.1*Lienzo.height +"px"
+        PheT1.style.left="0%" //0.1*Lienzo.width +"px"
         PheT1.style.width="100%"
         PheT1.style.height="100%"
     }
@@ -183,16 +184,16 @@ function fPantallaNo2(){
         if(mirador){
             PheT2.style.display="inline"
             PheT2.style.position="absolute"
-            PheT2.style.top="0%" 
-            PheT2.style.left="0%" 
+            PheT2.style.top="0%" //0.1*Lienzo.height +"px"
+            PheT2.style.left="0%" //0.1*Lienzo.width +"px"
             PheT2.style.width="100%"
             PheT2.style.height="100%"
         }
         else{
             PheT3.style.display="inline"
             PheT3.style.position="absolute"
-            PheT3.style.top="0%" 
-            PheT3.style.left="0%"
+            PheT3.style.top="0%" //0.1*Lienzo.height +"px"
+            PheT3.style.left="0%" //0.1*Lienzo.width +"px"
             PheT3.style.width="100%"
             PheT3.style.height="100%"
         }
@@ -204,7 +205,20 @@ function graficar(){
     
     if(vPantallaNo1){
         fPantallaNo1();
-        index=index<44?++index:0;
+        //index=index<7?(j<2?++j:++index):0;
+        if(index<6){
+            if(repeticion<3){
+                ++repeticion;
+            }
+            else{
+                repeticion=0;
+                ++index
+            }
+            
+        }
+        else{
+            index=0;
+        }
         pos=posX>raj?--posX:(posY<0?++posY:0)
         
         
@@ -225,13 +239,13 @@ function Dibujo(){
 }
 
 function onInicio(){
-    for(let i=0;i<45;i++){
+    for(let i=0;i<7;i++){
         Animacion[i] = new Image();
-        Animacion[i].src = (i+1)+".png";
+        Animacion[i].src = i+1+".png";
         Animacion[i].onload = function(){
         }
+        
     }
-
     onRedimensionar();
     Dibujo();
 }
