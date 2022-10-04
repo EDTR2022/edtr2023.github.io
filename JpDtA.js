@@ -57,19 +57,18 @@ function onRoundRect(ctx,x,y,width,height,radius,txt,color1,color2){
 
 function onRedimensionar(){
 
-    //if(window.innerHeight<175){
-        //window.innerHeight=175;
-    //}
     Lienzo.width=Math.floor(window.innerWidth);
     Lienzo.height=Math.floor(window.innerHeight);
     
     let diagonalActual=Math.floor(Math.sqrt(Math.pow(Lienzo.width,2)+Math.pow(Lienzo.height,2)));
     factor= diagonalActual/diagonalIni;
     
+    
     if(factor>=0.8 && factor<=1){
         factor=0.9;
     }
-        
+      
+    
     if(fPantallaNo1){
         centro = Lienzo.width/2;
         //TamanoFuente= factor*TamanoFuenteIni;
@@ -90,7 +89,7 @@ function onRedimensionar(){
         
         AnchoBoton=0.12*Lienzo.width;
         AltoBoton=AnchoBoton/4;//Lienzo.height/24.325;
-        CentroBotonY=AnimacionY+altoAnimacion+100*factor //AltoEncabezado+altoAnimacion+2*AltoBoton+100;
+        CentroBotonY=AnimacionY+altoAnimacion+100*factor;
 
         EncabezadoX=Lienzo.width/2-AnchoEncabezado/2;
 
@@ -135,10 +134,8 @@ function fPantallaNo1(){
     pincel.clearRect(0,0,Lienzo.width,Lienzo.height);
     pincel.drawImage(Encabezado,EncabezadoX-pos,40*factor,AnchoEncabezado,AltoEncabezado);
     pincel.drawImage(Animacion[index],AnimacionX+pos,AnimacionY,anchoAnimacion,altoAnimacion);
-        
-    //AnchoBoton=Lienzo.width/8.25;
-    //AltoBoton=AnchoBoton/4;
-
+    //console.log(index)    
+    
     let AnchoBoton1=AnchoBoton,AltoBoton1=AltoBoton;
     let AnchoBoton2=AnchoBoton,AltoBoton2=AltoBoton;
     let AnchoBoton3=AnchoBoton,AltoBoton3=AltoBoton;
@@ -161,7 +158,7 @@ function fPantallaNo1(){
       }
 
     onRoundRect(pincel,centro/2-AnchoBoton2/2-pos,CentroBotonY-AltoBoton2/2-pos,AnchoBoton2,AltoBoton2,10*factor,"Vectores","blue","blue");
-    onRoundRect(pincel,centro-AnchoBoton1/2-pos,CentroBotonY-AltoBoton1/2-pos,AnchoBoton1,AltoBoton1,10*factor,"M.A.S","blue","blue");
+    onRoundRect(pincel,centro-AnchoBoton1/2-pos,CentroBotonY-AltoBoton1/2-pos,AnchoBoton1,AltoBoton1,10*factor,"M.a.s","blue","blue");
     onRoundRect(pincel,3*centro/2-AnchoBoton3/2-pos,CentroBotonY-AltoBoton3/2-pos,AnchoBoton3,AltoBoton3,10*factor,"Fuerza","blue","blue");
 
     
@@ -205,8 +202,7 @@ function graficar(){
     
     if(vPantallaNo1){
         fPantallaNo1();
-        //index=index<7?(j<2?++j:++index):0;
-        if(index<6){
+        if(index<8){
             if(repeticion<3){
                 ++repeticion;
             }
@@ -239,7 +235,7 @@ function Dibujo(){
 }
 
 function onInicio(){
-    for(let i=0;i<7;i++){
+    for(let i=0;i<9;i++){
         Animacion[i] = new Image();
         Animacion[i].src = i+1+".png";
         Animacion[i].onload = function(){
