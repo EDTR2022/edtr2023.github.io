@@ -130,11 +130,11 @@ function onArea(Lienzo,evt,Cx,Cy,espacioX,espacioY){
 }
 
 function fPantallaNo1(){
-            
+           
     pincel.clearRect(0,0,Lienzo.width,Lienzo.height);
     pincel.drawImage(Encabezado,EncabezadoX-pos,40*factor,AnchoEncabezado,AltoEncabezado);
     pincel.drawImage(Animacion[index],AnimacionX+pos,AnimacionY,anchoAnimacion,altoAnimacion);
-    //console.log(index)    
+    
     
     let AnchoBoton1=AnchoBoton,AltoBoton1=AltoBoton;
     let AnchoBoton2=AnchoBoton,AltoBoton2=AltoBoton;
@@ -199,10 +199,10 @@ function fPantallaNo2(){
     
 }
 function graficar(){
-    
+    fPantallaNo1();
     if(vPantallaNo1){
-        fPantallaNo1();
-        if(index<8){
+        
+        if(index<4){
             if(repeticion<3){
                 ++repeticion;
             }
@@ -215,6 +215,8 @@ function graficar(){
         else{
             index=0;
         }
+        
+        
         pos=posX>raj?--posX:(posY<0?++posY:0)
         
         
@@ -227,6 +229,7 @@ function graficar(){
 }    
     
 function Dibujo(){
+    
     graficar();
     setTimeout(
         function(){
@@ -235,13 +238,15 @@ function Dibujo(){
 }
 
 function onInicio(){
-    for(let i=0;i<9;i++){
+    for(let i=0;i<4;i++){
         Animacion[i] = new Image();
         Animacion[i].src = i+1+".png";
-        Animacion[i].onload = function(){
-        }
+        //Animacion[i].onload = function(){
+        //}
         
     }
+    Animacion[4] =Animacion[0]
+    Animacion[5] =Animacion[1] 
     onRedimensionar();
     Dibujo();
 }
