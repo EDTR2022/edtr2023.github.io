@@ -199,9 +199,8 @@ function fPantallaNo2(){
     
 }
 function graficar(){
-    fPantallaNo1();
     if(vPantallaNo1){
-        
+        fPantallaNo1();
         if(index<4){
             if(repeticion<3){
                 ++repeticion;
@@ -229,7 +228,6 @@ function graficar(){
 }    
     
 function Dibujo(){
-    
     graficar();
     setTimeout(
         function(){
