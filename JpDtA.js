@@ -237,7 +237,7 @@ function graficar(){
     else{
         if(vPantallaNo2){
             fPantallaNo2();
-            grmm=grmm<=centro?grmm+25:grmm
+            grmm=grmm<=centro?grmm+30:grmm
         }
     }
 }    
