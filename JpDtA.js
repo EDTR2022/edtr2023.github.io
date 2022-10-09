@@ -183,17 +183,30 @@ function fPantallaNo2(){
         
         if(MasClick){
             PheT1.style.display="inline"
-           
+            PheT1.style.position="absolute"
+            PheT1.style.top="0%"
+            PheT1.style.left="0%"
+            PheT1.style.width="100%"
+            PheT1.style.height="100%"           
         }
         else{
             if(VectoresClick){
                 PheT2.style.display="inline"
+                PheT2.style.position="absolute"
+                PheT2.style.top="0%"
+                PheT2.style.left="0%"
+                PheT2.style.width="100%"
+                PheT2.style.height="100%" 
                 
             }
             else{
                 if(GravedadClick){
                     PheT3.style.display="inline"
-
+                    PheT3.style.position="absolute"
+                    PheT3.style.top="0%"
+                    PheT3.style.left="0%"
+                    PheT3.style.width="100%"
+                    PheT3.style.height="100%" 
                 }
             }
             
