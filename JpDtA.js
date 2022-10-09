@@ -183,11 +183,11 @@ function fPantallaNo2(){
         
         if(MasClick){
             PheT1.style.display="inline"
-            PheT1.style.position="absolute"
-            PheT1.style.top="0%"
-            PheT1.style.left="0%"
-            PheT1.style.width="100%"
-            PheT1.style.height="100%"           
+            //PheT1.style.position="absolute"
+            //PheT1.style.top="0%"
+            //PheT1.style.left="0%"
+            //PheT1.style.width="100%"
+            //PheT1.style.height="100%"           
         }
         else{
             if(VectoresClick){
