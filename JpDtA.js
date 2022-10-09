@@ -162,18 +162,8 @@ function fPantallaNo1(){
     onRoundRect(pincel,centro/2-AnchoBoton2/2-pos,CentroBotonY-AltoBoton2/2-pos,AnchoBoton2,AltoBoton2,10*factor,"Vectores","blue","blue");
     onRoundRect(pincel,centro-AnchoBoton1/2-pos,CentroBotonY-AltoBoton1/2-pos,AnchoBoton1,AltoBoton1,10*factor,"M.a.s","blue","blue");
     onRoundRect(pincel,3*centro/2-AnchoBoton3/2-pos,CentroBotonY-AltoBoton3/2-pos,AnchoBoton3,AltoBoton3,10*factor,"Fuerza","blue","blue");
-
-    
-    //console.log(pos);
-    
 }
 function fPantallaNo2(){
-    //"visibility: hidden;position: absolute; top:0; left: 0; width: 50%; height: 50%;" 
-    //pincel.clearRect(0,0,Lienzo.width,Lienzo.height);
-    //Lienzo.style.display="none";
-    //console.log(centro,grmm)
-    //let anchopantalla=(3*centro/2-AnchoBoton3/2-pos+AnchoBoton3)-(centro/2-AnchoBoton2/2-pos)
-    
     
     if(grmm==0){
         VectoresClick=mirador
@@ -190,7 +180,7 @@ function fPantallaNo2(){
     
     if(grmm>centro){
         Lienzo.style.display="none";
-        //console.log(Lienzo.width)
+        
         if(MasClick){
             PheT1.style.display="inline"
            
