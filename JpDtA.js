@@ -236,14 +236,8 @@ function graficar(){
     }
     else{
         if(vPantallaNo2){
-            if(grmm<=centro ){
-                fPantallaNo2();
-                grmm=grmm+25;
-            }
-            else{
-                fPantallaNo2();
-            }
-            
+            fPantallaNo2();
+            grmm=grmm<=centro?grmm+25:grmm
         }
     }
 }    
