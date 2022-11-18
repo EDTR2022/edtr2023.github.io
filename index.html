@@ -1,41 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación</title>
-</head>
-
-<body onload="onInicio()">
-    <iframe
-        id="idPheT1" 
-        style="display: none;" 
-        frameborder="0" 
-        src="MAS.html"
-        type="text/html" >
-    </iframe>
-    <iframe
-        id="idPheT2" 
-        style="display: none;" 
-        frameborder="0" 
-        src="Vectores.html"
-        type="text/html" >
-    </iframe>
-    <iframe
-        id="idPheT3" 
-        style="display: none;" 
-        frameborder="0" 
-        src="Gravedad.html"
-        type="text/html" >
-    </iframe>
-    
-    <canvas 
-        id="idLienzo"
-        style="position:absolute ; top: 0px;left: 0px;width: 100%;height: 100%;" 
-    > 
-    </canvas>
-    
-    <script src="JpDtA.js" ></script>
- </body>
+<html>
+  <head>
+    <base target="_top">
+    <title>Movimiento Armónico Simple</title>
+  </head>
+  
+  <body onload="onInicio()">
+    <div  style="position: absolute;top: 0%;left: 0;width: 100%;height: 100%; display: flex;justify-content: center;align-items: center; background-color: #FCF3CF;">
+      <canvas id="idLienzo" ></canvas>
+    </div>
+    <script src="MdTa.js" ></script>
+  </body>
 </html>
