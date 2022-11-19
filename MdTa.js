@@ -17,7 +17,7 @@ for(let i=0;i<12;i++){
 }
 
 const logo1 = new Image();
-logo1.src = "logo1.png";
+logo1.src = "logo1.svg";
 logo1.onload = function(){
 }
 const logo2 = new Image();
