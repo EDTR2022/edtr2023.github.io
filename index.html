@@ -2,13 +2,38 @@
 <html>
   <head>
     <base target="_top">
-    <title>Movimiento Armónico Simple</title>
+    <title>Movimiento Armonico Simple</title>
   </head>
   
   <body onload="onInicio()">
-    <div  style="position: absolute;top: 0%;left: 0;width: 100%;height: 100%; display: flex;justify-content: center;align-items: center; background-color: #FFFFFF;">
-      <canvas id="idLienzo" ></canvas>
+    <div
+      id="idDiv"
+      style="
+            position: absolute;
+            top: 0%;left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            
+      ">
+
+      <iframe
+        id="EdT" 
+        style="display: none;position: absolute;top: 0%;left: 0;width: 100%;height: 100%;" 
+        frameborder="0" 
+        src="MAS.html"
+        type="text/html" >
+      </iframe>
+
+      <canvas 
+      id="idLienzo"
+      style="position:absolute ; top: 0px;left: 0px;width: 100%;height: 100%;background-color: black;"
+      </canvas>
+
+      
     </div>
-    <script src="MdTa.js" ></script>
+    <script src="Daniela.js" ></script>  
   </body>
 </html>
