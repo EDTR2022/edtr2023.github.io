@@ -77,10 +77,10 @@ var BarraInferiorVisible=true;
 var AnimacionBs=0;
 
 var boton1=true;
-var boton2=false;
-var boton3=false;
+var boton2=true;
+var boton3=true;
 
-var iAmplitud=100;
+var iAmplitud=150;
 var parametro=[0,10,0];
 var AmplitudMax;
 var PeriodoMax;
